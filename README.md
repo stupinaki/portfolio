@@ -1,9 +1,3 @@
-## Запуск
-
-1. Запусти `npm run dev`
-2. Открой http://localhost:3000
-3. Стенд: https://pre-prod-xello.mish.design/
-
 ## Code style
 
 1. Названия компонентов: `PascalCase`
