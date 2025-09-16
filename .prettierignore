@@ -1,0 +1,7 @@
+.next/*
+
+storybook-static/*
+
+node_modules/*
+
+types/Api.ts
