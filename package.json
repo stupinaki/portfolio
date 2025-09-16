@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "code-examples",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "0.27.14",
-    "gsap": "^3.13.0",
+    "gsap": "3.13.0",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
