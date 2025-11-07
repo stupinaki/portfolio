@@ -1,5 +1,5 @@
 {
-  "name": "code-examples",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "0.27.14",
-    "clsx": "^2.1.1",
+    "clsx": "2.1.1",
     "gsap": "3.13.0",
     "next": "15.5.3",
     "react": "19.1.0",
