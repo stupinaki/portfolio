@@ -1,0 +1,48 @@
+.root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: var(--z-index-header);
+  height: var(--header-height);
+  color: var(--primary-text-color);
+  background: transparent;
+  transition:
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out;
+}
+
+.active {
+  color: var(--secondary-text-color);
+  background: var(--secondary-bg);
+}
+
+.nav {
+  height: 100%;
+}
+
+.navList {
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 var(--side-padding);
+  color: inherit;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

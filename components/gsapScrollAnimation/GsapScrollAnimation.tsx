@@ -84,7 +84,15 @@ const GsapScrollAnimation = ({
       },
       onComplete: onAnimationComplete,
     });
-  }, [imageSize.height, imageSize.width, frameCount, paths]);
+  }, [
+    imageSize.height,
+    imageSize.width,
+    frameCount,
+    paths,
+    onAnimationComplete,
+    onImageLoaded,
+    onAnimationReverse,
+  ]);
 
   return (
     <div className={style.root}>
