@@ -1,0 +1,40 @@
+.root {
+  position: fixed;
+  right: 50%;
+  bottom: -200%;
+  z-index: var(--z-index-popup);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 12px var(--side-padding);
+  color: var(--secondary-text-color);
+  background: var(--secondary-bg);
+  transform: translateX(50%);
+  transition: 0.5s;
+
+  @media (width >= 1440px) {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.visible {
+  bottom: 0;
+}
+
+.button {
+  width: fit-content;
+  padding: 12px 20px;
+  color: inherit;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: opacity 300ms ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
