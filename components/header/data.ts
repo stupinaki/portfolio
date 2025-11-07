@@ -3,7 +3,7 @@ import { HeaderNavKeys } from '@interfaces/base';
 type HeaderItem = {
   key: HeaderNavKeys;
   link: string;
-  isDownload?: boolean;
+  linkEn?: string;
 };
 
 export const HEADER_LINKS: HeaderItem[] = [
@@ -21,7 +21,7 @@ export const HEADER_LINKS: HeaderItem[] = [
   },
   {
     key: 'cv',
-    link: '/cv-stupina.pdf',
-    isDownload: true,
+    link: '/cv-stupina-ru.pdf',
+    linkEn: '/cv-stupina-en.pdf',
   },
 ];

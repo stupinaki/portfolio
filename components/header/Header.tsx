@@ -41,10 +41,13 @@ export const Header = ({ lng }: DefaultComponentProps) => {
               {lng === 'ru' ? 'EN' : 'RU'}
             </Link>
           </li>
-          {HEADER_LINKS.map((link) => (
-            <li key={link.key}>
-              <Link href={link.link} target="_blank" className={styles.link}>
-                {t(`nav.${link.key}`)}
+          {HEADER_LINKS.map(({ key, linkEn, link }) => (
+            <li key={key}>
+              <Link
+                href={lng === 'en' && linkEn ? linkEn : link}
+                target="_blank"
+                className={styles.link}>
+                {t(`nav.${key}`)}
               </Link>
             </li>
           ))}

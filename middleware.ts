@@ -47,7 +47,11 @@ function buildResponse(req: NextRequest, lng: string) {
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (pathname.indexOf('icon') > -1 || pathname.indexOf('chrome') > -1) {
+  if (
+    pathname.indexOf('icon') > -1 ||
+    pathname.indexOf('chrome') > -1 ||
+    pathname.endsWith('.pdf')
+  ) {
     return NextResponse.next();
   }
   const lng = resolveLng(req);
