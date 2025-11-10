@@ -11,6 +11,7 @@ import clsx from 'clsx';
 import Cookie from '@components/cookie/Cookie';
 import { Header } from '@components/header/Header';
 import { getLanguage } from '@helpers/getLanguage';
+import { ParamsPage } from '@interfaces/base';
 import styles from '@styles/rootLayout.module.scss';
 
 const geistSans = Geist({
@@ -18,14 +19,12 @@ const geistSans = Geist({
   subsets: ['latin', 'cyrillic'],
 });
 
-type Params = Promise<{ lng: string }>;
-
 type Props = {
   children: ReactNode;
-  params: Params;
+  params: ParamsPage;
 };
 
-export async function generateMetadata(params: Params): Promise<Metadata> {
+export async function generateMetadata(params: ParamsPage): Promise<Metadata> {
   const { lng } = await params;
   const language = getLanguage(lng);
   const isRu = language === 'ru';
