@@ -8,6 +8,7 @@ import '@styles/reset.scss';
 import '@styles/variables.scss';
 import clsx from 'clsx';
 
+import { ThemeProvider } from '@/contexts/ThemeContext';
 import Cookie from '@components/cookie/Cookie';
 import { Header } from '@components/header/Header';
 import { getLanguage } from '@helpers/getLanguage';
@@ -45,11 +46,13 @@ export default async function RootLayout({ children, params }: Props) {
 
   return (
     <html lang={language}>
-      <body className={clsx(geistSans.variable, styles.root)}>
-        <Header lng={language} />
-        {children}
-        <Cookie lng={language} />
-      </body>
+      <ThemeProvider>
+        <body className={clsx(geistSans.variable, styles.root)}>
+          <Header lng={language} />
+          {children}
+          <Cookie lng={language} />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

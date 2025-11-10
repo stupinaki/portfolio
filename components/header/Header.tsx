@@ -7,15 +7,19 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 import { useTranslation } from '@/app/i18n/client';
+import { useTheme } from '@/contexts/ThemeContext';
 import handleLanguageLink from '@/helpers/handleLanguageLink';
 import { HEADER_LINKS } from '@components/header/data';
 import { DefaultComponentProps } from '@interfaces/base';
+import DarkSvg from 'assets/svg/dark.svg';
+import LightSvg from 'assets/svg/light.svg';
 
 import styles from './header.module.scss';
 
 export const Header = ({ lng }: DefaultComponentProps) => {
   const [isActive, setActive] = useState(false);
   const { t } = useTranslation(lng);
+  const { isDark, setDark } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,19 +39,32 @@ export const Header = ({ lng }: DefaultComponentProps) => {
       <nav className={styles.nav}>
         <ul className={styles.navList}>
           <li>
-            <Link
-              href={handleLanguageLink(lng)}
-              className={clsx(styles.link, styles.bold)}>
-              {lng === 'ru' ? 'EN' : 'RU'}
+            <button
+              className={clsx(styles.link, styles.theme)}
+              onClick={() => setDark(!isDark)}>
+              <div className={styles.linkText}>
+                {isDark ? (
+                  <DarkSvg width={20} height={20} />
+                ) : (
+                  <LightSvg width={20} height={20} />
+                )}
+              </div>
+            </button>
+          </li>
+
+          <li>
+            <Link href={handleLanguageLink(lng)} className={styles.link}>
+              <p className={styles.linkText}>{lng === 'ru' ? 'En' : 'Ru'}</p>
             </Link>
           </li>
+
           {HEADER_LINKS.map(({ key, linkEn, link }) => (
             <li key={key}>
               <Link
                 href={lng === 'en' && linkEn ? linkEn : link}
                 target="_blank"
                 className={styles.link}>
-                {t(`nav.${key}`)}
+                <p className={styles.linkText}>{t(`nav.${key}`)}</p>
               </Link>
             </li>
           ))}

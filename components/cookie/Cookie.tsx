@@ -21,9 +21,6 @@ const Cookie = ({ lng }: DefaultComponentProps) => {
     setIsVisible(true);
   }, []);
 
-  console.log({ isCookieAccepted });
-  if (isCookieAccepted) console.log('isCookieAccepted');
-
   return (
     <div
       className={clsx(styles.root, {

@@ -10,7 +10,7 @@
     "format": "prettier --write . --ignore-path .prettierignore",
     "stylelint": "npx stylelint \"**/*.scss\"",
     "stylelint-fix": "stylelint --fix \"**/*.scss\"",
-    "lint:fix": "eslint --fix --ext .ts,.tsx app components constants hooks interfaces helpers",
+    "lint:fix": "eslint --fix --ext .ts,.tsx app components constants hooks interfaces helpers contexts",
     "format-all": "npm run lint:fix && npm run stylelint-fix && npm run format"
   },
   "dependencies": {
@@ -27,7 +27,8 @@
     "react-i18next": "15.7.3",
     "accept-language": "3.0.20",
     "js-cookie": "3.0.5",
-    "typograf": "7.4.4"
+    "typograf": "7.4.4",
+    "@svgr/webpack": "8.1.0"
   },
   "devDependencies": {
     "@types/js-cookie": "3.0.5",

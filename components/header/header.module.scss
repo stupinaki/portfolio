@@ -7,9 +7,8 @@
   height: var(--header-height);
   color: var(--primary-text-color);
   background: transparent;
-  transition:
-    background-color 300ms ease-in-out,
-    color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out,
+  color 300ms ease-in-out;
 }
 
 .active {
@@ -29,6 +28,25 @@
   scrollbar-width: none;
 }
 
+.linkText {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    border-bottom: 2px solid var(--primary-text-color);
+    will-change: width;
+    transition: width 300ms ease-in-out;
+  }
+}
+
 .link {
   display: flex;
   align-items: center;
@@ -36,13 +54,17 @@
   height: 100%;
   padding: 0 var(--side-padding);
   color: inherit;
-  transition: opacity 300ms ease-in-out;
 
   &:hover {
-    opacity: 0.6;
+    .linkText:after {
+      width: 100%;
+    }
   }
 }
 
-.bold {
-  font-weight: bold;
+.theme {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: transparent;
 }

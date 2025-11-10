@@ -23,3 +23,5 @@ export type CookiesProps = {
   title: string;
   button: string;
 };
+
+export type Theme = 'light' | 'dark';
