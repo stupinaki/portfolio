@@ -3,7 +3,7 @@ import { getLanguage } from '@helpers/getLanguage';
 import { ParamsPage } from '@interfaces/base';
 import styles from '@styles/page.module.scss';
 
-// todo: переключатель темы
+// todo: для карточек https://reactbits.dev/components/chroma-grid
 // todo: карточки проектов
 
 type Props = {
