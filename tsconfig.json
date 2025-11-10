@@ -25,7 +25,8 @@
       "@helpers/*": ["helpers/*"],
       "@styles/*": ["styles/*"],
       "@interfaces/*": ["interfaces/*"],
-      "@constants/*": ["constants/*"]
+      "@constants/*": ["constants/*"],
+      "@assets/*": ["assets/*"]
     },
     "target": "ES2017"
   },

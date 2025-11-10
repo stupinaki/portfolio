@@ -1,9 +1,5 @@
 :root {
-  /* COLORS */
-  --primary-text-color: #000000fd;
-  --secondary-text-color: #fff;
-  --primary-bg: rgb(244 242 241 / 100%);
-  --secondary-bg: rgb(19 23 19 / 100%);
+  color-scheme: light dark;
 
   /* HEIGHT WIDTH */
   --header-height: 40px;
@@ -33,4 +29,20 @@
   @media (width >= 1920px) {
     --side-padding: 80px;
   }
+}
+
+.lightTheme {
+  --primary-text-color: #000000fd;
+  --secondary-text-color: #fff;
+  --primary-bg: rgb(244 242 241 / 100%);
+  --secondary-bg: rgb(19 23 19 / 100%);
+  --accent-color: pink;
+}
+
+.darkTheme {
+  --primary-text-color: #fff;
+  --secondary-text-color: #000000fd;
+  --primary-bg: rgb(19 23 19 / 100%);
+  --secondary-bg: rgb(244 242 241 / 100%);
+  --accent-color: olivedrab;
 }
