@@ -9,15 +9,15 @@
     "lint": "next lint",
     "format": "prettier --write . --ignore-path .prettierignore",
     "stylelint": "npx stylelint \"**/*.scss\"",
-    "stylelint-fix": "stylelint --fix \"**/*.scss\"",
+    "stylelint:fix": "stylelint --fix \"**/*.scss\"",
     "lint:fix": "eslint --fix --ext .ts,.tsx app components constants hooks interfaces helpers contexts",
-    "format-all": "npm run lint:fix && npm run stylelint-fix && npm run format"
+    "format:all": "npm run lint:fix && npm run stylelint-fix && npm run format"
   },
   "dependencies": {
     "@floating-ui/react": "0.27.14",
     "clsx": "2.1.1",
     "gsap": "3.13.0",
-    "next": "15.5.3",
+    "next": "16.2.1-canary.17",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "usehooks-ts": "3.1.1",
