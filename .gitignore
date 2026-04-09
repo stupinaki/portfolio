@@ -45,3 +45,4 @@ next-env.d.ts
 # AI
 /.opencode
 /CLAUDE.md
+/skills-lock.json
